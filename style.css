@@ -43,8 +43,7 @@
 }
 
 .rating-bar__stars {
-  width: 50%;
-  margin: 0 auto;
+  text-align: center;
 }
 
 .rating-bar__text {
