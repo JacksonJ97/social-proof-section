@@ -12,6 +12,34 @@
   --lightGrayishMagenta: hsl(300, 24%, 96%);
 }
 
+body {
+  height: 1400px;
+  position: relative;
+}
+
+.mobile-bg-top {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.mobile-bg-bottom {
+  width: 100%;
+  max-height: 100%;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.desktop-bg-top {
+  display: none;
+}
+
+.desktop-bg-bottom {
+  display: none;
+}
+
 .container {
   width: 85%;
   height: 100vh;
@@ -54,15 +82,16 @@
   text-align: center;
 }
 
-.testimonials {
+/* .testimonials {
   padding-bottom: 6em;
-}
+} */
 
 .testimonial-card {
   background-color: var(--veryDarkMagenta);
   border-radius: 8px;
   padding: 2em;
   margin-bottom: 1em;
+  box-shadow: 0 8px 16px 0px rgba(0, 0, 0, 0.15);
 }
 
 .testimonial-card__details {
