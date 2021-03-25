@@ -13,12 +13,12 @@
 }
 
 body {
-  height: 1400px;
   position: relative;
 }
 
 .mobile-bg-top {
   width: 100%;
+  max-height: 300px;
   position: absolute;
   top: 0;
   left: 0;
@@ -26,7 +26,7 @@ body {
 
 .mobile-bg-bottom {
   width: 100%;
-  max-height: 100%;
+  max-height: 655px;
   position: absolute;
   bottom: 0;
   right: 0;
@@ -42,7 +42,6 @@ body {
 
 .container {
   width: 85%;
-  height: 100vh;
   margin: 0 auto;
 }
 
@@ -61,6 +60,7 @@ body {
   color: var(--darkGrayishMagenta);
   text-align: center;
   margin-bottom: 2.5em;
+  font-weight: 500;
 }
 
 .rating-bar {
@@ -82,9 +82,9 @@ body {
   text-align: center;
 }
 
-/* .testimonials {
-  padding-bottom: 6em;
-} */
+.testimonials {
+  padding-bottom: 4em;
+}
 
 .testimonial-card {
   background-color: var(--veryDarkMagenta);
@@ -124,4 +124,105 @@ body {
   font-size: 0.75rem;
   line-height: 1.75;
   margin-top: 2em;
+}
+
+@media (min-width: 1050px) {
+  .container {
+    height: 100vh;
+    max-width: 1100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .mobile-bg-top,
+  .mobile-bg-bottom {
+    display: none;
+  }
+
+  .desktop-bg-top {
+    display: inline-block;
+    width: 40%;
+    max-height: 400px;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  .desktop-bg-bottom {
+    display: inline-block;
+    width: 70%;
+    max-height: 800px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
+
+  .header-content {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .header-body {
+    margin-right: 1em;
+  }
+
+  .header-body__title {
+    font-size: 3rem;
+    line-height: 1;
+    text-align: left;
+    margin: 0;
+    margin-bottom: 0.25em;
+    max-width: 485px;
+  }
+
+  .header-body__text {
+    line-height: 1.5;
+    text-align: left;
+    max-width: 485px;
+  }
+
+  .header-ratings {
+    margin: auto 0;
+  }
+
+  .rating-bar {
+    display: flex;
+    align-items: center;
+    width: 450px;
+  }
+
+  .rating-bar:nth-child(2) {
+    margin-left: 2em;
+  }
+
+  .rating-bar:last-child {
+    margin-left: 4em;
+  }
+
+  .rating-bar__text {
+    margin: 0;
+    margin-left: 2em;
+  }
+
+  .testimonials {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0;
+  }
+
+  .testimonial-card {
+    width: 30%;
+    max-height: 243px;
+    margin: 0;
+  }
+
+  .testimonial-card:nth-child(2) {
+    margin-top: 3em;
+  }
+
+  .testimonial-card:last-child {
+    margin-top: 6em;
+  }
 }
